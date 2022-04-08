@@ -26,7 +26,7 @@ public class VehicleController {
     ModelMapper modelMapper;
 
     @GetMapping(value = "/vehicles", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<VehicleDTO>> getVehicle() {
+    public ResponseEntity<List<VehicleDTO>> getVehicles() {
         List<Vehicle> vehicleList = vehicleService.getAllVehicles();
         List<VehicleDTO> vehicleDTOList = new ArrayList<>();
         for(Vehicle vehicle : vehicleList) {
